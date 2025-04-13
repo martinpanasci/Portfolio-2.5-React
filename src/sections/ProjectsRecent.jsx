@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { PinContainer } from "../Components/ui/3d-pin";
-import { Modal } from "../components/Modal";
+import { Modal } from "../Components/Modal";
 import { useLanguage } from "../context/LanguageContext";
 
 export const ProjectsRecent = () => {
