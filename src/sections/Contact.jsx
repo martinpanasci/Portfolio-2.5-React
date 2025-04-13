@@ -1,5 +1,5 @@
 import React from "react";
-import Boxes from "../Components/ui/background-boxes"; // Asegurate de ajustar el path si no está ahí
+import Boxes from "../components/ui/background-boxes"; // Asegurate de ajustar el path si no está ahí
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 

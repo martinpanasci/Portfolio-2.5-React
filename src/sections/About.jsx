@@ -16,8 +16,8 @@ import mapImage from "../assets/images/mapa.png";
 import SmileMemoji from "../assets/images/memoji-smile.png";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import Card from "../Components/Card";
-import TechIcon from "../Components/TechIcon";
+import Card from "../components/Card";
+import TechIcon from "../components/TechIcon";
 
 const toolboxItems = [
   { title: "React", iconType: ReactIcon },
