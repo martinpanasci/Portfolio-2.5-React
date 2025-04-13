@@ -2,7 +2,7 @@ import yo from '../assets/images/yo3e.png'
 import ArrowDown from '../assets/icons/arrow-down.svg?react';
 import StarIcon from '../assets/icons/star.svg?react';
 import SparkleIcon from '../assets/icons/sparkle.svg?react';
-import { HeroOrbit } from '../Components/HeroOrbit'
+import { HeroOrbit } from '../components/HeroOrbit'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function HeroSection() {

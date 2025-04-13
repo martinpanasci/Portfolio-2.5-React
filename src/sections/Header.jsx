@@ -1,7 +1,7 @@
-// src/components/Header.jsx
+// src/section/Header.jsx
 import { useState } from "react";
-import LanguageSwitcher from "../Components/LanguageSwitcher"; 
-import LanguageSwitcherMobile from "../Components/LanguageSwitcherMobile";
+import LanguageSwitcher from "../components/LanguageSwitcher"; 
+import LanguageSwitcherMobile from "../components/LanguageSwitcherMobile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
