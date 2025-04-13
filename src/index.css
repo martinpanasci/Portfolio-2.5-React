@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;700&display=swap');
+
+@import "tailwindcss";
+@tailwind utilities;
+
+@import "leaflet/dist/leaflet.css";
+
+
+/* ✅ DEFINIR las fuentes como variables CSS */
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Calistoga', serif;
+}
+
+body {
+  @apply bg-gray-900 text-white font-sans;
+  font-family: var(--font-sans), sans-serif;
+}
+
+
+@layer base {
+    .nav-item {
+        @apply px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-500;
+    }
+
+    .hero-ring {
+        @apply absolute -z-10 inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+    }    
+}
+
+@layer components {
+    .tooltip {
+      @apply absolute top-full left-1/2 transform -translate-x-1/2 
+             bg-emerald-300 text-gray-900 px-5 py-2 rounded-md 
+             text-sm whitespace-nowrap shadow-lg opacity-0 
+             transition-opacity duration-300;
+    }
+
+    .tooltip-bottom {
+      @apply absolute bottom-full left-1/2 transform -translate-x-1/2 
+             bg-emerald-300 text-gray-900 px-5 py-2 rounded-md 
+             text-sm whitespace-nowrap shadow-lg opacity-0 
+             transition-opacity duration-300;
+    }
+  
+    .tooltip-visible {
+      @apply opacity-100;
+    }
+  }
+
+  @keyframes move-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+
+  

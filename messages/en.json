@@ -1,0 +1,158 @@
+{
+  "Header": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cv": "CV",
+    "email": "Email",
+    "copied": "Email copied!"
+  },
+  "Hero": {
+    "alt": "Memoji of me sitting at a computer",
+    "available": "Available for new Projects",
+    "title": "Full Stack",
+    "description": "I have a preference for backend development, specializing in building scalable APIs and managing complex databases. My goal is to grow into a Senior Backend Developer or Software Architect. Although my focus is on backend, I have solid experience with frontend technologies as many of my clients often request static websites or landing pages. In addition to this, I excel in collaborative environments where I can apply my leadership and communication skills to achieve the goals we have.",
+    "explore": "Explore My Work",
+    "connect": "Let's Connect"
+  },
+  "Projects": {
+    "label": "Real-world Results",
+    "title": {
+      "part1": "A Small Selection of",
+      "part2": "Recent Projects"
+    },
+    "subtitle": "See how I transformed concepts into engaging digital experiences",
+    "viewMore": "View More",
+    "items": {
+      "project1": {
+        "title": "BUGGIA Trainer",
+        "description": "A platform for managing and selling workout plans with user roles, secure payments, and JWT auth.",
+        "des": "It is a platform for managing and selling personalized workout routines and training programs. It offers functionalities for both users and administrators, including the creation, editing, and assignment of routines.<br /><br /><strong>Main Features:</strong><br />- <strong>Interactive routines:</strong> with a history of your progress.<br />- <strong>Secure purchases:</strong> of programs through Mercado Pago.<br />- <strong>Role differentiation:</strong> (user and admin) with JWT authentication.<br />- <strong>Robust backend:</strong> in Node.js and MySQL for comprehensive data management.<br /><br /><strong>Current Status:</strong> The project is under development; only images, videos, and complete service details need to be added, which the client is currently working on."
+      },
+      "project2": {
+        "title": "URL Shortener",
+        "description": "A URL shortener with analytics, JWT authentication, and QR code generation.",
+        "des": "It is a tool for shortening URLs and managing links efficiently. Designed for both occasional and registered users, it combines functionality and ease of use.<br /><br /><strong>Main Features:</strong><br />- <strong>Dynamic shortener:</strong> generates personalized short links.<br />- <strong>Statistics:</strong> track clicks and performance.<br />- <strong>QR Code:</strong> integrated for easy sharing.<br />- <strong>Link management:</strong> edit and delete links for registered users.<br />- <strong>JWT Authentication:</strong> for enhanced security.<br />- <strong>Intuitive frontend:</strong> minimalist design in React."
+      },
+      "project3": {
+        "title": "App LRobledo",
+        "description": "Client management and automated WhatsApp messaging using Twilio.",
+        "des": "It is a tool for scheduling clients and automating messages via WhatsApp Business. Ideal for businesses and professionals who need to communicate with their clients efficiently.<br /><br /><strong>Main Features:</strong><br />- <strong>Client management:</strong> allows adding, editing, and deleting contacts.<br />- <strong>Scheduled messages:</strong> automatic sending on specific dates.<br />- <strong>Reusable templates:</strong> create predefined messages to save time.<br />- <strong>Robust database:</strong> MySQL storage for secure data handling.<br />- <strong>JWT Authentication:</strong> secure access with encrypted tokens.<br />- <strong>Twilio integration:</strong> uses the WhatsApp Business API for automated messaging."
+      },
+      "project4": {
+        "title": "My Landing Page",
+        "description": "Personal landing page with a modern design, animations, and Tailwind CSS optimization.",
+        "des": "Modern and responsive landing page designed to showcase my services and skills.<br /><br /><strong>Main Features:</strong><br />- <strong>Responsive design:</strong> adapts to any device.<br />- <strong>Modern style:</strong> uses Tailwind CSS for a professional look.<br />- <strong>Efficient navigation:</strong> allows smooth exploration of information.<br />- <strong>Optimization:</strong> clean and efficient code for better performance.<br />- <strong>Animations:</strong> integrated with Framer Motion for an interactive experience."
+      },
+      "project5": {
+        "title": "Rendersmdp Landing Page",
+        "description": "A sleek architecture landing page with animations and interactive project showcases.",
+        "des": "Landing page designed for an architect, functioning as an effective sales funnel.<br /><br /><strong>Highlights:</strong><br />- <strong>Minimalist and elegant design:</strong> combines modern aesthetics with a smooth user experience.<br />- <strong>Immersive animations:</strong> integrated with Framer Motion to add dynamism and highlight each section.<br />- <strong>Smooth experience:</strong> each section provides essential information without overwhelming the user, maintaining a continuous flow from the hero section to a call to action that drives conversions.<br />- <strong>Project showcase:</strong> achieved with an interactive modal and integrated slider that allows displaying multiple projects without interrupting navigation or breaking visual harmony."
+      }
+    }
+  },
+  "Modal": {
+    "visit": "Visit Project",
+    "noLink": "No link available for this project."
+  },
+  "Tape": {
+    "words": [
+      "Performant",
+      "Accessible",
+      "Secure",
+      "Interactive",
+      "Scalable",
+      "User Friendly",
+      "Responsive",
+      "Maintainable",
+      "Search Optimized",
+      "Usable",
+      "Reliable",
+  
+      "Performant",
+      "Accessible",
+      "Secure",
+      "Interactive",
+      "Scalable",
+      "User Friendly",
+      "Responsive",
+      "Maintainable",
+      "Search Optimized",
+      "Usable",
+      "Reliable"
+    ]
+  },
+  "About": {
+    "label": "About Me",
+    "title": {
+      "part1": "A Glimpse Into",
+      "part2": "My World"
+    },
+    "subtitle": "Learn more about who I am, what I do, and what inspires me.",
+    "reads": {
+      "title": "My Reads",
+      "text": "Explore the books shaping my perspectives."
+    },
+    "toolbox": {
+      "title": "My Toolbox",
+      "text": "Explore the technologies and tools I use to craft exceptional digital experiences."
+    },
+    "beyond": {
+      "title": "Beyond the Code",
+      "text": "Explore my interests and hobbies beyond the digital realm."
+    },
+    "hobbies": {
+      "football": "Football",
+      "gaming": "Gaming",
+      "hiking": "Hiking",
+      "coaching": "Coaching",
+      "fitness": "Fitness",
+      "crypto": "Cryptocurrency",
+      "trading": "Trading",
+      "bike": "Bike riding"
+    }
+  },
+  "Experience": {
+    "label": "What Shaped Me",
+    "title": {
+      "part1": "My Work & Education",
+      "part2": "Experience"
+    },
+    "subtitle": "Learn more about my professional journey and academic background.",
+    "items": {
+      "1": {
+        "title": "Full Stack Developer",
+        "desc": "📌 Freelance, 2024 - Present <br />💬 Designed and developed full-stack applications with a strong focus on performance, security, and seamless backend/frontend integration."
+      },
+      "2": {
+        "title": "Higher Diploma <br /> in Programming",
+        "desc": "🎓 Completed a Higher Diploma in Programming at Instituto Técnico Superior Teclab.<br />📅 Duration: March 2023 - December 2024.<br />💡 Gained solid knowledge in backend and frontend development, databases, and API integration."
+      },
+      "3": {
+        "title": "Video Game Coach",
+        "desc": "📌 Freelance, 2020 - Present <br />💬 Led a team of professional players, providing coaching and in-game assistance while managing client acquisition, payments, and high-performance results."
+      },
+      "4": {
+        "title": "IT Area Coordinator",
+        "desc": "📌 Don Orione School, 2017 - 2021 <br />💬 Ensured optimal system performance by providing IT support, solving technical issues, and managing server maintenance across multiple offices."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Were you looking for someone to make a difference? <br /> Here I am.",
+    "subtitle": "Contact me and discover how I can be the perfect fit for what you need. You won’t regret it.",
+    "button": "Contact Me"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "cv": "CV",
+    "email": "Email",
+    "phone": "Phone",
+    "copiedEmail": "Email copied!",
+    "copiedPhone": "Phone copied!"
+  }
+  
+  
+}

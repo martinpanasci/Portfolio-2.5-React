@@ -1,0 +1,158 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "cv": "CV",
+    "email": "Correo",
+    "copied": "¡Correo copiado!"
+  },
+  "Hero": {
+    "alt": "Memoji mío sentado en una computadora",
+    "available": "Disponible para nuevos proyectos",
+    "title": "Full Stack",
+    "description": "Tengo preferencia por el desarrollo backend, especializado en construir APIs escalables y gestionar bases de datos complejas. Mi objetivo es crecer como Backend Senior o Arquitecto de Software. Y aunque mi enfoque está en backend, tengo experiencia sólida con tecnologías frontend ya que muchos de mis clientes solicitan sitios estáticos o landing pages. Además, destaco en ambientes colaborativos donde puedo aplicar mis habilidades de liderazgo y comunicación para alcanzar nuestras metas.",
+    "explore": "Ver mis proyectos",
+    "connect": "Conectemos"
+  },
+  "Projects": {
+    "label": "Resultados Reales",
+    "title": {
+      "part1": "Una Pequeña Selección de",
+      "part2": "Proyectos Recientes"
+    },
+    "subtitle": "Mirá cómo convertí ideas en experiencias digitales atractivas",
+    "viewMore": "Ver Más",
+    "items": {
+      "project1": {
+        "title": "BUGGIA Trainer",
+        "description": "Plataforma para vender planes de entrenamiento con roles, pagos seguros y autenticación JWT.",
+        "des": "Es una plataforma para gestionar y vender rutinas personalizadas. Ofrece funcionalidades para usuarios y administradores, incluyendo la creación, edición y asignación de rutinas.<br /><br /><strong>Funciones principales:</strong><br />- <strong>Rutinas interactivas:</strong> con historial de progreso.<br />- <strong>Compras seguras:</strong> mediante Mercado Pago.<br />- <strong>Diferenciación de roles:</strong> (usuario y admin) con autenticación JWT.<br />- <strong>Backend robusto:</strong> Node.js y MySQL para gestión completa de datos.<br /><br /><strong>Estado actual:</strong> En desarrollo, faltan agregar imágenes, videos y detalles de los servicios."
+      },
+      "project2": {
+        "title": "Acortador de URLs",
+        "description": "Acortador de URLs con estadísticas, autenticación JWT y generación de QR.",
+        "des": "Herramienta para acortar URLs y gestionarlas eficientemente. Pensada para usuarios registrados y esporádicos.<br /><br /><strong>Funciones principales:</strong><br />- <strong>Acortador dinámico:</strong> genera enlaces personalizados.<br />- <strong>Estadísticas:</strong> seguimiento de clics y rendimiento.<br />- <strong>Código QR:</strong> para compartir fácilmente.<br />- <strong>Gestión de enlaces:</strong> edición y borrado.<br />- <strong>Autenticación JWT:</strong> mayor seguridad.<br />- <strong>Frontend intuitivo:</strong> diseño minimalista en React."
+      },
+      "project3": {
+        "title": "App LRobledo",
+        "description": "Gestión de clientes y mensajes automatizados por WhatsApp usando Twilio.",
+        "des": "Herramienta para agendar clientes y automatizar mensajes por WhatsApp Business. Ideal para profesionales y negocios.<br /><br /><strong>Funciones principales:</strong><br />- <strong>Gestión de clientes:</strong> agregar, editar y eliminar.<br />- <strong>Mensajes programados:</strong> envío automático.<br />- <strong>Plantillas reutilizables:</strong> ahorra tiempo.<br />- <strong>Base de datos segura:</strong> en MySQL.<br />- <strong>Autenticación JWT:</strong> con tokens cifrados.<br />- <strong>Integración Twilio:</strong> para mensajería automática."
+      },
+      "project4": {
+        "title": "Mi Landing Page",
+        "description": "Landing moderna, animada y optimizada con Tailwind CSS.",
+        "des": "Landing responsive diseñada para mostrar mis servicios y habilidades.<br /><br /><strong>Funciones principales:</strong><br />- <strong>Diseño responsive:</strong> se adapta a cualquier dispositivo.<br />- <strong>Estilo moderno:</strong> con Tailwind CSS.<br />- <strong>Navegación eficiente:</strong> fluida.<br />- <strong>Optimización:</strong> código limpio.<br />- <strong>Animaciones:</strong> con Framer Motion."
+      },
+      "project5": {
+        "title": "Landing Rendersmdp",
+        "description": "Landing de arquitectura con animaciones e interacción de proyectos.",
+        "des": "Landing para un arquitecto con enfoque comercial.<br /><br /><strong>Aspectos destacados:</strong><br />- <strong>Diseño minimalista:</strong> moderno y claro.<br />- <strong>Animaciones inmersivas:</strong> con Framer Motion.<br />- <strong>Fluidez:</strong> información clara y ordenada.<br />- <strong>Exposición de proyectos:</strong> modal interactivo con slider."
+      }
+    }
+  },
+  "Modal": {
+    "visit": "Visitar Proyecto",
+    "noLink": "No hay enlace disponible para este proyecto."
+  },
+  "Tape": {
+    "words": [
+      "Rendimiento",
+      "Accesible",
+      "Seguro",
+      "Interactivo",
+      "Escalable",
+      "Amigable",
+      "Responsivo",
+      "Mantenible",
+      "Optimizado para SEO",
+      "Usable",
+      "Confiable",
+  
+      "Rendimiento",
+      "Accesible",
+      "Seguro",
+      "Interactivo",
+      "Escalable",
+      "Amigable",
+      "Responsivo",
+      "Mantenible",
+      "Optimizado para SEO",
+      "Usable",
+      "Confiable"
+    ]
+  },
+  "About": {
+    "label": "Sobre mí",
+    "title": {
+      "part1": "Un vistazo a",
+      "part2": "Mi mundo"
+    },
+    "subtitle": "Conocé más sobre quién soy, qué hago y qué me inspira.",
+    "reads": {
+      "title": "Mis Lecturas",
+      "text": "Explorá los libros que moldean mi perspectiva."
+    },
+    "toolbox": {
+      "title": "Mi Caja de Herramientas",
+      "text": "Descubrí las tecnologías y herramientas que uso para crear experiencias digitales excepcionales."
+    },
+    "beyond": {
+      "title": "Más allá del código",
+      "text": "Conocé mis intereses y hobbies fuera del mundo digital."
+    },
+    "hobbies": {
+      "football": "Fútbol",
+      "gaming": "Videojuegos",
+      "hiking": "Trekking",
+      "coaching": "Coaching",
+      "fitness": "Fitness",
+      "crypto": "Criptomonedas",
+      "trading": "Trading",
+      "bike": "Ciclismo"
+    }
+  },
+  "Experience": {
+    "label": "Mi Trayectoria",
+    "title": {
+      "part1": "Mi Trabajo y Educación",
+      "part2": "Experiencia"
+    },
+    "subtitle": "Conocé más sobre mi recorrido profesional y académico.",
+    "items": {
+      "1": {
+        "title": "Desarrollador Full Stack",
+        "desc": "📌 Freelance, 2024 - Presente <br />💬 Diseño y desarrollo de aplicaciones full-stack con foco en rendimiento, seguridad e integración fluida entre backend y frontend."
+      },
+      "2": {
+        "title": "Tecnicatura Superior <br /> en Programación",
+        "desc": "🎓 Tecnicatura en Programación en el Instituto Técnico Superior Teclab.<br />📅 Duración: Marzo 2023 - Diciembre 2024.<br />💡 Conocimientos sólidos en desarrollo backend y frontend, bases de datos e integración de APIs."
+      },
+      "3": {
+        "title": "Coach de Videojuegos",
+        "desc": "📌 Freelance, 2020 - Presente <br />💬 Lideré equipos de jugadores profesionales, brindando coaching, asistencia in-game y gestionando clientes, pagos y resultados de alto rendimiento."
+      },
+      "4": {
+        "title": "Coordinador Área IT",
+        "desc": "📌 Colegio Don Orione, 2017 - 2021 <br />💬 Soporte técnico, resolución de problemas y mantenimiento de servidores en múltiples sedes para asegurar el funcionamiento del sistema."
+      }
+    }
+  },
+  "Contact": {
+    "title": "¿Estabas buscando a alguien que marque la diferencia? <br /> Acá estoy.",
+    "subtitle": "Contactame y descubrí por qué soy la persona ideal para lo que necesitás. No te vas a arrepentir.",
+    "button": "Contactame"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "cv": "CV",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "copiedEmail": "¡Correo copiado!",
+    "copiedPhone": "¡Teléfono copiado!"
+  }
+
+
+}
