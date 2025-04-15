@@ -1,11 +1,17 @@
 import React from "react";
 import { motion } from "motion/react";
 import { cn } from "../../../lib/utils";
+import { useIsDesktop } from "../../hooks/useIsDesktop"; 
+
 
 export const BoxesCore = ({
   className,
   ...rest
 }) => {
+  const isDesktop = useIsDesktop();
+
+  if (!isDesktop) return null; // ⛔ No renderizar en mobile
+
   const rows = new Array(150).fill(1);
   const cols = new Array(100).fill(1);
   let colors = [
@@ -22,6 +28,7 @@ export const BoxesCore = ({
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
+
 
   return (
     <div

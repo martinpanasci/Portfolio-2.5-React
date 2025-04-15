@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
+import { useIsDesktop } from "../../hooks/useIsDesktop"; // Usás tu versión
 
 export const PinContainer = ({
   children,
@@ -8,20 +9,25 @@ export const PinContainer = ({
   href,
   className,
   containerClassName,
-  onOpenModal,  // Nueva prop para manejar la apertura del modal
-  modalData,    // Datos que se pasarán al modal
+  onOpenModal,
+  modalData,
 }) => {
   const [transform, setTransform] = useState("translate(-50%,-50%) rotateX(0deg)");
+  const isDesktop = useIsDesktop();
 
   const onMouseEnter = () => {
-    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+    if (isDesktop) {
+      setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+    }
   };
   const onMouseLeave = () => {
-    setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+    if (isDesktop) {
+      setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
+    }
   };
 
   const handleClick = () => {
-    onOpenModal(modalData);  // Llama a la función para abrir el modal con los datos
+    onOpenModal(modalData);
   };
 
   return (
@@ -45,9 +51,10 @@ export const PinContainer = ({
         >
           <div className={cn("relative z-50", className)}>{children}</div>
         </div>
-        
       </div>
-      <PinPerspective title={title} href={href} />
+
+      {/* Solo mostramos esto en escritorio */}
+      {isDesktop && <PinPerspective title={title} href={href} />}
     </div>
   );
 };
