@@ -3,14 +3,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { BrowserTracing } from "@sentry/tracing";
+
 import { LanguageProvider } from './context/LanguageContext'
 
 // Inicializás Sentry con el DSN que te dieron
 Sentry.init({
-  dsn: "https://f8dc2af93af4a06708bf1bdbe27cc98e@o4590154302131024.ingest.us.sentry.io/4590154302951424",
-  integrations: [new BrowserTracing()], // podés agregar `BrowserTracing()` si querés medir performance
-  tracesSampleRate: 1.0,
+  dsn: "https://07e8f76abb82c0f910c4e03f35f17357@o4509154301313024.ingest.us.sentry.io/4509154528133120"
 });
 
 
