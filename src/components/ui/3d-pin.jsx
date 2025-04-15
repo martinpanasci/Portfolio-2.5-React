@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
-import { useIsDesktop } from "../../hooks/useIsDesktop"; // Usás tu versión
+import { useIsDesktop } from "../../hooks/useIsDesktop";
+import useDomCountLogger from "../../hooks/useDomCountLogger";
 
 export const PinContainer = ({
   children,
@@ -14,6 +15,7 @@ export const PinContainer = ({
 }) => {
   const [transform, setTransform] = useState("translate(-50%,-50%) rotateX(0deg)");
   const isDesktop = useIsDesktop();
+  useDomCountLogger("PinContainer");
 
   const onMouseEnter = () => {
     if (isDesktop) {

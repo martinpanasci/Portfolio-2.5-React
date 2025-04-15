@@ -19,6 +19,7 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import TechIcon from "../components/TechIcon";
 
+
 const toolboxItems = [
   { title: "React", iconType: ReactIcon },
   { title: "Next.js", iconType: nextjsIcon },
@@ -36,6 +37,7 @@ const toolboxItems = [
 export default function AboutSection() {
   const { langEn } = useLanguage();
   const ref = useRef(null);
+  
 
   const hobbies = langEn
     ? [

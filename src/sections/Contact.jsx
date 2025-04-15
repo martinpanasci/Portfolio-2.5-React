@@ -3,8 +3,10 @@ import Boxes from "../components/ui/background-boxes";
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 
+
 export default function ContactSection() {
   const { langEn } = useLanguage();
+  
 
   const title = langEn
     ? "Were you looking for someone to make a difference? <br /> Here I am."

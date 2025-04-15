@@ -4,11 +4,13 @@ import { cn } from "../../../lib/utils";
 import { useIsDesktop } from "../../hooks/useIsDesktop"; 
 
 
+
 export const BoxesCore = ({
   className,
   ...rest
 }) => {
   const isDesktop = useIsDesktop();
+  
 
   if (!isDesktop) return null; // ⛔ No renderizar en mobile
 

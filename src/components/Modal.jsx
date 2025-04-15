@@ -4,9 +4,11 @@ import { useLanguage } from "../context/LanguageContext";
 export const Modal = ({ onClose, data }) => {
   const { langEn } = useLanguage();
 
+  
   return (
     <div className="fixed inset-0 bg-black/75 flex items-center justify-center z-50 overflow-y-auto">
       <div className="bg-gray-900 rounded-3xl my-8 mx-1">
+        
         <div className="relative bg-emerald-300/5 rounded-3xl border border-emerald-500/[0.2] p-6 shadow-lg max-w-5xl w-full max-h-screen overflow-y-auto">
           <button
             onClick={onClose}
@@ -14,7 +16,7 @@ export const Modal = ({ onClose, data }) => {
           >
             ✖
           </button>
-
+         
           <h2 className="font-serif text-3xl lg:text-5xl text-center pb-4 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
             {data.title}
           </h2>
@@ -27,11 +29,14 @@ export const Modal = ({ onClose, data }) => {
               className="w-auto h-80 object-cover rounded-lg mb-4"
             />
           </div>
-
-          <p
-            className="lg:text-base lg:font-normal font-light text-sm mb-6"
-            dangerouslySetInnerHTML={{ __html: data.des }}
-          ></p>
+          
+          <ul className="lg:text-base text-sm mb-6 space-y-1 list-disc list-inside text-white/90">
+            {data.des.map((item, i) => (
+              <li key={i}>
+                <span className="font-semibold">{item.split(":")[0]}:</span> {item.split(":")[1]}
+              </li>
+            ))}
+          </ul>
 
           <div className="flex flex-wrap justify-center gap-4 mb-4">
             {data.iconLists.map((tech, index) => (
@@ -48,7 +53,7 @@ export const Modal = ({ onClose, data }) => {
             ))}
           </div>
 
-          {data.link ? (
+         {data.link ? (
             <div className="flex justify-center">
               <a
                 href={data.link}
@@ -64,8 +69,10 @@ export const Modal = ({ onClose, data }) => {
             <p className="text-center text-gray-500">
               {langEn ? "No link available for this project." : "No hay enlace disponible para este proyecto."}
             </p>
-          )}
+          )} 
+          
         </div>
+      
       </div>
     </div>
   );

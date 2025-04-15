@@ -59,6 +59,7 @@ export default function Experience() {
   const { langEn } = useLanguage();
   const workExperience = langEn ? workExperienceEn : workExperienceEs;
 
+
   return (
     <div id="experience" className="py-24">
       <div className="container mx-auto px-4">

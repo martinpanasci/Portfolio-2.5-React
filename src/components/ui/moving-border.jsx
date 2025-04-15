@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
+
 export const MovingBorder = ({
   children,
   duration = 2000,
@@ -17,6 +18,8 @@ export const MovingBorder = ({
 }) => {
   const pathRef = useRef(null);
   const progress = useMotionValue(0);
+  const pathLength = useMotionValue(0);
+  
 
   useAnimationFrame((time) => {
     const length = pathRef.current?.getTotalLength();

@@ -1,8 +1,9 @@
 import StarIcon from "../assets/icons/star.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 
+
 export default function TapeSection() {
-  const { langEn } = useLanguage();
+  const { langEn } = useLanguage();  
 
   const wordsEn = [
     "Performant", "Accessible", "Secure", "Interactive", "Scalable",

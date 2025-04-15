@@ -10,6 +10,8 @@ import { useIsDesktop } from "../hooks/useIsDesktop";
 export default function HeroSection() {
   const { langEn } = useLanguage();
   const isDesktop = useIsDesktop();
+  
+
 
   return (
     <div id="home" className="py-32 relative z-0 overflow-x-clip">

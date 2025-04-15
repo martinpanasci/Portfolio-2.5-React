@@ -5,9 +5,13 @@ import LanguageSwitcherMobile from "../components/LanguageSwitcherMobile";
 import { Link } from "react-scroll";
 import { useLanguage } from "../context/LanguageContext";
 
+
 export default function Header() {
   const [copied, setCopied] = useState(false);
   const { langEn } = useLanguage();
+
+  
+
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("mpanasci95@gmail.com");

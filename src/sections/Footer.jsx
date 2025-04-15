@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 
+
 export default function Footer() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const { langEn } = useLanguage();
+  
 
   const handleCopy = (text, setCopied) => {
     navigator.clipboard.writeText(text);
