@@ -1,22 +1,19 @@
-import yo from '../assets/images/yo3e.png'
+import yo from '../assets/images/yo3e.png';
 import ArrowDown from '../assets/icons/arrow-down.svg?react';
 import StarIcon from '../assets/icons/star.svg?react';
 import SparkleIcon from '../assets/icons/sparkle.svg?react';
-import { HeroOrbit } from '../components/HeroOrbit'
-import { useLanguage } from '../context/LanguageContext'
+import { HeroOrbit } from '../components/HeroOrbit';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function HeroSection() {
-  const { t } = useLanguage()
+  const { langEn } = useLanguage();
 
   return (
     <div id="home" className="py-32 relative z-0 overflow-x-clip">
-      
+
       {/* ⚠️ NO TOCAR ESTE DIV */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
-        <div
-          className="absolute inset-0 -z-30 opacity-5"
-          style={{ backgroundImage: `url("/grain.jpg")`, }}
-        ></div>
+        <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url("/grain.jpg")` }}></div>
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
@@ -65,14 +62,16 @@ export default function HeroSection() {
         <div className="flex flex-col items-center">
           <img
             src={yo}
-            alt={t("Hero.alt")}
+            alt={langEn ? "Memoji of me sitting at a computer" : "Memoji mío sentado en una computadora"}
             className="h-[250px] md:h-[350px] w-auto"
           />
           <div className="bg-gray-950 border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg md:w-80 md:justify-center">
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large" />
             </div>
-            <div className="text-sm font-semibold">{t("Hero.available")}</div>
+            <div className="text-sm font-semibold">
+              {langEn ? "Available for new Projects" : "Disponible para nuevos proyectos"}
+            </div>
           </div>
         </div>
 
@@ -86,7 +85,9 @@ export default function HeroSection() {
             Developer
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            {t("Hero.description")}
+            {langEn
+              ? "I have a preference for backend development, specializing in building scalable APIs and managing complex databases. My goal is to grow into a Senior Backend Developer or Software Architect. Although my focus is on backend, I have solid experience with frontend technologies as many of my clients often request static websites or landing pages. In addition to this, I excel in collaborative environments where I can apply my leadership and communication skills to achieve the goals we have."
+              : "Tengo preferencia por el desarrollo backend, especializado en construir APIs escalables y gestionar bases de datos complejas. Mi objetivo es crecer como Backend Senior o Arquitecto de Software. Y aunque mi enfoque está en backend, tengo experiencia sólida con tecnologías frontend ya que muchos de mis clientes solicitan sitios estáticos o landing pages. Además, destaco en ambientes colaborativos donde puedo aplicar mis habilidades de liderazgo y comunicación para alcanzar nuestras metas."}
           </p>
         </div>
 
@@ -94,25 +95,29 @@ export default function HeroSection() {
           <button
             className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer z-10"
             onClick={() => {
-              const target = document.querySelector("#projects")
-              if (target) target.scrollIntoView({ behavior: "smooth" })
+              const target = document.querySelector("#projects");
+              if (target) target.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <span className="font-semibold">{t("Hero.explore")}</span>
+            <span className="font-semibold">
+              {langEn ? "Explore My Work" : "Ver mis proyectos"}
+            </span>
             <ArrowDown className="size-4" />
           </button>
           <button
             className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl cursor-pointer z-10"
             onClick={() => {
-              const target = document.querySelector("#contact")
-              if (target) target.scrollIntoView({ behavior: "smooth" })
+              const target = document.querySelector("#contact");
+              if (target) target.scrollIntoView({ behavior: "smooth" });
             }}
           >
             <span>👋</span>
-            <span className="font-semibold">{t("Hero.connect")}</span>
+            <span className="font-semibold">
+              {langEn ? "Let's Connect" : "Conectemos"}
+            </span>
           </button>
         </div>
       </div>
     </div>
-  )
+  );
 }

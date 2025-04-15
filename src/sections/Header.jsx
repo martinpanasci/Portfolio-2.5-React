@@ -10,7 +10,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function Header() {
   const [copied, setCopied] = useState(false);
-  const { t } = useLanguage();
+  const { langEn } = useLanguage();
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("mpanasci95@gmail.com");
@@ -24,33 +24,35 @@ export default function Header() {
       {/* NAVIGATION LINKS */}
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <Link to="home" smooth duration={500} className="nav-item cursor-pointer">
-          {t("Header.home")}
+          {langEn ? "Home" : "Inicio"}
         </Link>
         <Link to="projects" smooth duration={500} className="nav-item cursor-pointer">
-          {t("Header.projects")}
+          {langEn ? "Projects" : "Proyectos"}
         </Link>
         <Link to="about" smooth duration={500} className="nav-item cursor-pointer">
-          {t("Header.about")}
+          {langEn ? "About" : "Sobre mí"}
         </Link>
         <Link to="experience" smooth duration={500} className="nav-item cursor-pointer hidden md:flex">
-          {t("Header.experience")}
+          {langEn ? "Experience" : "Experiencia"}
         </Link>
         <Link to="contact" smooth duration={500} className="nav-item cursor-pointer bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">
-          {t("Header.contact")}
+          {langEn ? "Contact" : "Contacto"}
         </Link>
       </nav>
 
       {/* EXTERNAL LINKS */}
       <nav className="flex p-0.5 border border-white/15 border-t-0 rounded-full bg-white/10 backdrop-blur -mt-[0px]">
         <a href="https://mpanasci.com/cv.pdf" target="_blank" rel="noopener noreferrer" className="nav-item">
-          <FontAwesomeIcon icon={faFilePdf} className="icon" /> {t("Header.cv")}
+          <FontAwesomeIcon icon={faFilePdf} className="icon" /> {langEn ? "CV" : "CV"}
         </a>
         <div className="relative inline-block">
           <button onClick={(e) => { e.preventDefault(); handleCopyEmail(); }} className="nav-item">
-            <FontAwesomeIcon icon={faEnvelope} className="icon" /> {t("Header.email")}
+            <FontAwesomeIcon icon={faEnvelope} className="icon" /> {langEn ? "Email" : "Correo"}
           </button>
           {copied && (
-            <span className="tooltip tooltip-visible">{t("Header.copied")}</span>
+            <span className="tooltip tooltip-visible">
+              {langEn ? "Email copied!" : "¡Correo copiado!"}
+            </span>
           )}
         </div>
         <a href="https://www.linkedin.com/in/martin-panasci/" target="_blank" rel="noopener noreferrer" className="nav-item">

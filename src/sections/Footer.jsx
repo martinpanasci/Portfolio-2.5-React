@@ -5,7 +5,7 @@ import { useLanguage } from "../context/LanguageContext";
 export default function Footer() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
-  const { t } = useLanguage();
+  const { langEn } = useLanguage();
 
   const handleCopy = (text, setCopied) => {
     navigator.clipboard.writeText(text);
@@ -20,11 +20,11 @@ export default function Footer() {
 
       <div className="container mx-auto px-4">
         <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
-          <div className="text-white/40">&copy; 2025. MPanasci {t("footer.rights")}</div>
+          <div className="text-white/40">&copy; 2025. MPanasci {langEn ? "All rights reserved." : "Todos los derechos reservados."}</div>
 
           <nav className="flex flex-col md:flex-row items-center gap-8 pointer-events-auto">
             <a href="https://mpanasci.com/cv.pdf" className="inline-flex items-center gap-1.5">
-              <span className="font-semibold">{t("footer.cv")}</span>
+              <span className="font-semibold">{langEn ? "CV" : "CV"}</span>
               <ArrowUpRightIcon className="size-4" />
             </a>
 
@@ -36,11 +36,11 @@ export default function Footer() {
                 }}
                 className="inline-flex items-center gap-1.5 cursor-pointer"
               >
-                {t("footer.email")}
+                {langEn ? "Email" : "Correo"}
               </button>
               {copiedEmail && (
                 <span className="tooltip-bottom tooltip-visible">
-                  {t("footer.copiedEmail")}
+                  {langEn ? "Email copied!" : "¡Correo copiado!"}
                 </span>
               )}
               <ArrowUpRightIcon className="size-4" />
@@ -54,11 +54,11 @@ export default function Footer() {
                 }}
                 className="inline-flex items-center gap-1.5 cursor-pointer"
               >
-                {t("footer.phone")}
+                {langEn ? "Phone" : "Teléfono"}
               </button>
               {copiedPhone && (
                 <span className="tooltip-bottom tooltip-visible">
-                  {t("footer.copiedPhone")}
+                  {langEn ? "Phone copied!" : "¡Teléfono copiado!"}
                 </span>
               )}
               <ArrowUpRightIcon className="size-4" />

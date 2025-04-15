@@ -34,35 +34,50 @@ const toolboxItems = [
 ];
 
 export default function AboutSection() {
-  const { t } = useLanguage();
+  const { langEn } = useLanguage();
   const ref = useRef(null);
 
-  const hobbies = [
-    { title: t("About.hobbies.football"), emoji: "⚽", left: "5%", top: "5%" },
-    { title: t("About.hobbies.gaming"), emoji: "🎮", left: "50%", top: "15%" },
-    { title: t("About.hobbies.hiking"), emoji: "🥾", left: "10%", top: "35%" },
-    { title: t("About.hobbies.coaching"), emoji: "💪", left: "55%", top: "60%" },
-    { title: t("About.hobbies.fitness"), emoji: "🏋️‍♀️", left: "70%", top: "35%" },
-    { title: t("About.hobbies.crypto"), emoji: "💰", left: "15%", top: "65%" },
-    { title: t("About.hobbies.trading"), emoji: "📈", left: "35%", top: "25%" },
-    { title: t("About.hobbies.bike"), emoji: "🚴‍♀️", left: "75%", top: "0%" },
-  ];
+  const hobbies = langEn
+    ? [
+        { title: "Football", emoji: "⚽", left: "5%", top: "5%" },
+        { title: "Gaming", emoji: "🎮", left: "50%", top: "15%" },
+        { title: "Hiking", emoji: "🥾", left: "10%", top: "35%" },
+        { title: "Coaching", emoji: "💪", left: "55%", top: "60%" },
+        { title: "Fitness", emoji: "🏋️‍♀️", left: "70%", top: "35%" },
+        { title: "Cryptocurrency", emoji: "💰", left: "15%", top: "65%" },
+        { title: "Trading", emoji: "📈", left: "35%", top: "25%" },
+        { title: "Bike riding", emoji: "🚴‍♀️", left: "75%", top: "0%" },
+      ]
+    : [
+        { title: "Fútbol", emoji: "⚽", left: "5%", top: "5%" },
+        { title: "Videojuegos", emoji: "🎮", left: "50%", top: "15%" },
+        { title: "Trekking", emoji: "🥾", left: "10%", top: "35%" },
+        { title: "Coaching", emoji: "💪", left: "55%", top: "60%" },
+        { title: "Fitness", emoji: "🏋️‍♀️", left: "70%", top: "35%" },
+        { title: "Criptomonedas", emoji: "💰", left: "15%", top: "65%" },
+        { title: "Trading", emoji: "📈", left: "35%", top: "25%" },
+        { title: "Ciclismo", emoji: "🚴‍♀️", left: "75%", top: "0%" },
+      ];
 
   return (
     <div id="about" className="py-20 lg:py-28">
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
-            {t("About.label")}
+            {langEn ? "About Me" : "Sobre mí"}
           </p>
         </div>
         <h2 className="font-serif text-3xl text-center mt-6 lg:text-5xl">
-          {t("About.title.part1")}{" "}
+          {langEn ? "A Glimpse Into" : "Un vistazo a"}{" "}
           <span className="bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
-            {t("About.title.part2")}
+            {langEn ? "My World" : "Mi mundo"}
           </span>
         </h2>
-        <p className="text-center text-white/60 mt-4">{t("About.subtitle")}</p>
+        <p className="text-center text-white/60 mt-4">
+          {langEn
+            ? "Learn more about who I am, what I do, and what inspires me."
+            : "Conocé más sobre quién soy, qué hago y qué me inspira."}
+        </p>
 
         <div className="mt-20 flex flex-col gap-6">
           <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8">
@@ -70,9 +85,15 @@ export default function AboutSection() {
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2">
                   <StarIcon className="size-9 text-emerald-300" />
-                  <h3 className="font-serif text-3xl">{t("About.reads.title")}</h3>
+                  <h3 className="font-serif text-3xl">
+                    {langEn ? "My Reads" : "Mis Lecturas"}
+                  </h3>
                 </div>
-                <p className="text-sm text-white/60 mt-2">{t("About.reads.text")}</p>
+                <p className="text-sm text-white/60 mt-2">
+                  {langEn
+                    ? "Explore the books shaping my perspectives."
+                    : "Explorá los libros que moldean mi perspectiva."}
+                </p>
               </div>
               <div className="w-40 mx-auto mt-8">
                 <img src={bookImage} alt="book cover" />
@@ -83,14 +104,23 @@ export default function AboutSection() {
               <div className="flex flex-col px-6 pt-6">
                 <div className="inline-flex items-center gap-2">
                   <StarIcon className="size-9 text-emerald-300" />
-                  <h3 className="font-serif text-3xl">{t("About.toolbox.title")}</h3>
+                  <h3 className="font-serif text-3xl">
+                    {langEn ? "My Toolbox" : "Mi Caja de Herramientas"}
+                  </h3>
                 </div>
-                <p className="text-sm text-white/60 mt-2">{t("About.toolbox.text")}</p>
+                <p className="text-sm text-white/60 mt-2">
+                  {langEn
+                    ? "Explore the technologies and tools I use to craft exceptional digital experiences."
+                    : "Descubrí las tecnologías y herramientas que uso para crear experiencias digitales excepcionales."}
+                </p>
               </div>
               <div className="flex ml-6 my-6">
                 <div className="flex flex-wrap py-0.5 gap-6">
-                  {toolboxItems.map(item => (
-                    <div key={item.title} className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg">
+                  {toolboxItems.map((item) => (
+                    <div
+                      key={item.title}
+                      className="inline-flex items-center gap-4 py-2 px-3 outline-2 outline-white/10 rounded-lg"
+                    >
                       <TechIcon component={item.iconType} />
                       <span className="font-semibold">{item.title}</span>
                     </div>
@@ -105,12 +135,18 @@ export default function AboutSection() {
               <div className="flex flex-col px-6 py-6">
                 <div className="inline-flex items-center gap-2">
                   <StarIcon className="size-9 text-emerald-300" />
-                  <h3 className="font-serif text-3xl">{t("About.beyond.title")}</h3>
+                  <h3 className="font-serif text-3xl">
+                    {langEn ? "Beyond the Code" : "Más allá del código"}
+                  </h3>
                 </div>
-                <p className="text-sm text-white/60 mt-2">{t("About.beyond.text")}</p>
+                <p className="text-sm text-white/60 mt-2">
+                  {langEn
+                    ? "Explore my interests and hobbies beyond the digital realm."
+                    : "Conocé mis intereses y hobbies fuera del mundo digital."}
+                </p>
               </div>
               <div className="relative flex-1" ref={ref}>
-                {hobbies.map(hobby => (
+                {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title}
                     className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-pointer"
@@ -127,7 +163,11 @@ export default function AboutSection() {
             </Card>
 
             <Card className="h-[320px] p-0 relative col-span-2">
-              <img src={mapImage} alt="map" className="h-full w-full object-cover object-left-top" />
+              <img
+                src={mapImage}
+                alt="map"
+                className="h-full w-full object-cover object-left-top"
+              />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]" />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10" />

@@ -1,10 +1,20 @@
 import React from "react";
-import Boxes from "../components/ui/background-boxes"; // Asegurate de ajustar el path si no está ahí
+import Boxes from "../components/ui/background-boxes";
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { langEn } = useLanguage();
+
+  const title = langEn
+    ? "Were you looking for someone to make a difference? <br /> Here I am."
+    : "¿Estabas buscando a alguien que marque la diferencia? <br /> Acá estoy.";
+
+  const subtitle = langEn
+    ? "Contact me and discover how I can be the perfect fit for what you need. You won’t regret it."
+    : "Contactame y descubrí por qué soy la persona ideal para lo que necesitás. No te vas a arrepentir.";
+
+  const buttonText = langEn ? "Contact Me" : "Contactame";
 
   return (
     <div id="contact" className="py-16 lg:py-24 pt-14 lg:pt-20">
@@ -28,10 +38,10 @@ export default function ContactSection() {
               <div>
                 <h2
                   className="font-serif text-2xl md:text-3xl relative z-20"
-                  dangerouslySetInnerHTML={{ __html: t("Contact.title") }}
+                  dangerouslySetInnerHTML={{ __html: title }}
                 />
                 <p className="text-sm mt-2 md:text-base relative z-20">
-                  {t("Contact.subtitle")}
+                  {subtitle}
                 </p>
               </div>
               <div>
@@ -41,9 +51,7 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                 >
                   <button className="inline-flex items-center text-white bg-gray-900 px-6 h-12 rounded-xl gap-2 w-max relative z-20">
-                    <span className="font-semibold">
-                      {t("Contact.button")}
-                    </span>
+                    <span className="font-semibold">{buttonText}</span>
                     <ArrowUpRightIcon className="size-5" />
                   </button>
                 </a>

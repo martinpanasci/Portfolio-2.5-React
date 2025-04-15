@@ -2,12 +2,12 @@ import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 
 export const Modal = ({ onClose, data }) => {
-  const { t } = useLanguage();
+  const { langEn } = useLanguage();
 
   return (
     <div className="fixed inset-0 bg-black/75 flex items-center justify-center z-50 overflow-y-auto">
       <div className="bg-gray-900 rounded-3xl my-8 mx-1">
-        <div className="relative bg-emerald-300/5 rounded-3xl border border-emerald-500/[0.2] p-6 shadow-lg max-w-5xl w-full relative max-h-screen overflow-y-auto">
+        <div className="relative bg-emerald-300/5 rounded-3xl border border-emerald-500/[0.2] p-6 shadow-lg max-w-5xl w-full max-h-screen overflow-y-auto">
           <button
             onClick={onClose}
             className="sticky top-0 flex justigy-end text-white hover:text-emerald-300 text-xl p-2 transition duration-300 z-50"
@@ -55,12 +55,14 @@ export const Modal = ({ onClose, data }) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-center bg-black text-white py-3 px-6 rounded-xl gap-2 w-max"
               >
-                {t("Modal.visit")}
+                {langEn ? "Visit Project" : "Visitar Proyecto"}
                 <ArrowUpRightIcon className="size-5" />
               </a>
             </div>
           ) : (
-            <p className="text-center text-gray-500">{t("Modal.noLink")}</p>
+            <p className="text-center text-gray-500">
+              {langEn ? "No link available for this project." : "No hay enlace disponible para este proyecto."}
+            </p>
           )}
         </div>
       </div>
