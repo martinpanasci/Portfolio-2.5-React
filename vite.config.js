@@ -7,9 +7,12 @@ import svgr from 'vite-plugin-svgr';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr(), sentryVitePlugin({
-    org: "yo-wq",
-    project: "javascript-react"
-  })],
+    org: "yo-wq", // tu organización
+    project: "javascript-react", // tu proyecto en Sentry
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+    include: "./dist", // carpeta de salida del build
+    urlPrefix: "~/",   // importante
+  }),],
 
   build: {
     sourcemap: true
