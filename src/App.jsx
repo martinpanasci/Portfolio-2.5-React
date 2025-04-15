@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import ProjectsRecent from "./sections/ProjectsRecent";
@@ -9,9 +9,7 @@ import ContactSection from "./sections/Contact";
 import Footer from "./sections/Footer";
 
 function App() {
-  useEffect(() => {
-    throw new Error("Error de prueba en iOS");
-  }, []); 
+  
 
   return (
     <div>        
