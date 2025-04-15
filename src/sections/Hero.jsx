@@ -3,7 +3,6 @@ import ArrowDown from '../assets/icons/arrow-down.svg?react';
 import StarIcon from '../assets/icons/star.svg?react';
 import SparkleIcon from '../assets/icons/sparkle.svg?react';
 import { HeroOrbit } from '../components/HeroOrbit';
-import { Helmet } from "react-helmet-async";
 import { useLanguage } from '../context/LanguageContext';
 import { useIsDesktop } from "../hooks/useIsDesktop";
 
@@ -14,49 +13,7 @@ export default function HeroSection() {
 
   return (
     <div id="home" className="py-32 relative z-0 overflow-x-clip">
-      <Helmet>
-        <title>{langEn ? "Martín Panasci | Full Stack Developer" : "Martín Panasci | Desarrollador Full Stack"}</title>
-        <meta
-          name="description"
-          content={
-            langEn
-              ? "Portfolio of Martín Panasci, full stack developer focused on scalable APIs and backend architecture."
-              : "Portfolio de Martín Panasci, desarrollador full stack enfocado en APIs escalables y arquitectura backend."
-          }
-        />
-        <meta property="og:title" content="Martín Panasci Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mpanasci.com" />
-        <meta property="og:image" content="https://mpanasci.com/og-image.jpg" />
-        <meta property="og:description" content="Full Stack Developer Portfolio - APIs, backend & scalable systems." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Martín Panasci",
-            "url": "https://mpanasci.com",
-            "sameAs": [
-              "https://www.linkedin.com/in/martin-panasci/",
-              "https://github.com/martinpanasci"
-            ],
-            "jobTitle": langEn ? "Full Stack Developer" : "Desarrollador Full Stack",
-            "description": langEn
-              ? "Full stack developer focused on backend, scalable APIs and systems integration."
-              : "Desarrollador full stack especializado en backend, APIs escalables e integración de sistemas.",
-            "alumniOf": {
-              "@type": "CollegeOrUniversity",
-              "name": "Instituto Técnico Superior Teclab"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Mar del Plata",
-              "addressRegion": "Buenos Aires",
-              "addressCountry": "AR"
-            }
-          })}
-        </script>
-      </Helmet>
+      
 
       {/* ✨ Siempre cargamos el fondo de grano y los anillos chicos en mobile */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
