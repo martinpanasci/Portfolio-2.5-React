@@ -20,13 +20,7 @@ export default function Header() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center fixed top-3 z-50">
-       <div>
-      <button className="border-2 border-red-500 bg-red-500 text-white p-2 rounded-md m-4 hover:bg-red-900 z-50"
-       onClick={() => {throw new Error("This is your first error!");}}
-      >
-        Break the world
-      </button>
-    </div>      
+       
       {/* NAVIGATION LINKS */}
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <Link to="home" smooth duration={500} className="nav-item cursor-pointer">
