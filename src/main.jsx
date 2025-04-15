@@ -9,7 +9,7 @@ import { LanguageProvider } from './context/LanguageContext'
 // Inicializás Sentry con el DSN que te dieron
 Sentry.init({
   dsn: "https://f8dc2af93af4a06708bf1bdbe27cc98e@o4590154302131024.ingest.us.sentry.io/4590154302951424",
-  integrations: [], // podés agregar `BrowserTracing()` si querés medir performance
+  integrations: [new BrowserTracing()], // podés agregar `BrowserTracing()` si querés medir performance
   tracesSampleRate: 1.0,
 });
 
