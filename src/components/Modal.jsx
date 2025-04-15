@@ -1,7 +1,7 @@
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg?react";
 import { useLanguage } from "../context/LanguageContext";
 
-export const Modal = ({ onClose, data }) => {
+const Modal = ({ onClose, data }) => {
   const { langEn } = useLanguage();
 
   
@@ -77,3 +77,6 @@ export const Modal = ({ onClose, data }) => {
     </div>
   );
 };
+
+
+export default Modal;

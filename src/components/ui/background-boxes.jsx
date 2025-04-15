@@ -3,8 +3,6 @@ import { motion } from "motion/react";
 import { cn } from "../../../lib/utils";
 import { useIsDesktop } from "../../hooks/useIsDesktop"; 
 
-
-
 export const BoxesCore = ({
   className,
   ...rest
@@ -12,10 +10,11 @@ export const BoxesCore = ({
   const isDesktop = useIsDesktop();
   
 
-  if (!isDesktop) return null; // ⛔ No renderizar en mobile
+  //if (!isDesktop) return null; // ⛔ No renderizar en mobile
 
-  const rows = new Array(150).fill(1);
-  const cols = new Array(100).fill(1);
+  const rows = new Array(isDesktop ? 40 : 22).fill(1);
+  const cols = new Array(isDesktop ? 22 : 24).fill(1);
+  
   let colors = [
     "#22d3ee", // cyan-400
     "#5eead4", // teal-300
@@ -35,7 +34,7 @@ export const BoxesCore = ({
   return (
     <div
       style={{
-        transform: `translate(-40%,-145%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
+        transform: `translate(10%, -25%) skewX(-38deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
         "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",

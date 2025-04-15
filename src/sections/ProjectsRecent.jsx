@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Modal } from "../components/Modal";
+import { lazy, Suspense } from "react";
+const Modal = lazy(() => import("../components/Modal"));
 import { useLanguage } from "../context/LanguageContext";
 
 
@@ -10,7 +11,7 @@ export const ProjectsRecent = () => {
   const [modalData, setModalData] = useState(null);
   const { langEn } = useLanguage();
 
-  
+
 
   const projectsEn = [
     {
@@ -310,7 +311,11 @@ export const ProjectsRecent = () => {
       </div>
 
 
-      {isModalOpen && <Modal onClose={handleModalClose} data={modalData} />}
+      {isModalOpen && (
+        <Suspense fallback={null}>
+          <Modal onClose={handleModalClose} data={modalData} />
+        </Suspense>
+      )}
 
 
     </div>
