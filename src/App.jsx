@@ -1,4 +1,3 @@
-import * as Sentry from "@sentry/react";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import ProjectsRecent from "./sections/ProjectsRecent";
@@ -12,20 +11,7 @@ function App() {
 
 
   return (
-    <div>  
-      <div>
-      <button
-        onClick={() => {
-          try {
-            throw new Error("This is your first error!");
-          } catch (error) {
-            Sentry.captureException(error);
-          }
-        }}
-      >
-        Break the world
-      </button>
-    </div>      
+    <div>      
       <Header />
       <Hero />
       <ProjectsRecent />
