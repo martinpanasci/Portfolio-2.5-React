@@ -1,4 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/assets/fonts/inter-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/assets/fonts/inter-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Calistoga';
+  src: url('/src/assets/fonts/calistoga-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @import "tailwindcss";
 @tailwind utilities;

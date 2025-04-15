@@ -8,18 +8,14 @@ export default function TapeSection() {
     "Performant", "Accessible", "Secure", "Interactive", "Scalable",
     "User Friendly", "Responsive", "Maintainable", "Search Optimized",
     "Usable", "Reliable",
-    "Performant", "Accessible", "Secure", "Interactive", "Scalable",
-    "User Friendly", "Responsive", "Maintainable", "Search Optimized",
-    "Usable", "Reliable"
+    
   ];
 
   const wordsEs = [
     "Rendimiento", "Accesible", "Seguro", "Interactivo", "Escalable",
     "Amigable", "Responsivo", "Mantenible", "Optimizado para SEO",
     "Usable", "Confiable",
-    "Rendimiento", "Accesible", "Seguro", "Interactivo", "Escalable",
-    "Amigable", "Responsivo", "Mantenible", "Optimizado para SEO",
-    "Usable", "Confiable"
+    
   ];
 
   const words = langEn ? wordsEn : wordsEs;

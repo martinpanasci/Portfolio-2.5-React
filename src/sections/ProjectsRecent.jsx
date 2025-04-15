@@ -205,9 +205,9 @@ export const ProjectsRecent = () => {
               >
                 <div className="relative flex items-center justify-center w-80 md:w-96 overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                    <img src="/bg.png" alt="bg-img" />
+                    <img src="/bg.webp" alt="bg-img" loading="lazy" width={384} height={192}/>
                   </div>
-                  <img src={img} alt={title} className="z-10 absolute bottom-0 w-full h-full object-cover" />
+                  <img src={img} alt={title} loading="lazy" className="z-10 absolute bottom-0 w-full h-full object-cover" />
                 </div>
                 <h3 className="font-bold lg:text-2xl md:text-lg line-clamp-1">{title}</h3>
                 <p className="lg:text-lg lg:font-normal font-light text-sm line-clamp-2">{description}</p>

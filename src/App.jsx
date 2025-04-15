@@ -3,23 +3,29 @@ import Hero from "./sections/Hero";
 import ProjectsRecent from "./sections/ProjectsRecent";
 import TapeSection from "./sections/Tape";
 import AboutSection from "./sections/About";
-import Experience from "./sections/Experience";
-import ContactSection from "./sections/Contact";
-import Footer from "./sections/Footer";
+import React, { Suspense } from "react";
+
+// Lazy imports
+const Experience = React.lazy(() => import('./sections/Experience'));
+const ContactSection = React.lazy(() => import('./sections/Contact'));
+const Footer = React.lazy(() => import('./sections/Footer'));
 
 function App() {
-
-
   return (
-    <div>      
+    <div>
       <Header />
       <Hero />
       <ProjectsRecent />
       <TapeSection />
       <AboutSection />
-      <Experience />
-      <ContactSection />
-      <Footer />
+
+      <Suspense fallback={<div className="text-white text-center">Cargando secciones...</div>}>
+
+        <Experience />
+        <ContactSection />
+        <Footer />
+        
+      </Suspense>
     </div>
   );
 }

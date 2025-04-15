@@ -1,60 +1,132 @@
-import yo from '../assets/images/yo3e.png';
+import yo from '../assets/images/yo3e.webp';
 import ArrowDown from '../assets/icons/arrow-down.svg?react';
 import StarIcon from '../assets/icons/star.svg?react';
 import SparkleIcon from '../assets/icons/sparkle.svg?react';
 import { HeroOrbit } from '../components/HeroOrbit';
+import { Helmet } from "react-helmet-async";
 import { useLanguage } from '../context/LanguageContext';
+import { useIsDesktop } from "../hooks/useIsDesktop";
+
 
 export default function HeroSection() {
   const { langEn } = useLanguage();
+  const isDesktop = useIsDesktop();
 
   return (
     <div id="home" className="py-32 relative z-0 overflow-x-clip">
+      <Helmet>
+        <title>{langEn ? "Martín Panasci | Full Stack Developer" : "Martín Panasci | Desarrollador Full Stack"}</title>
+        <meta
+          name="description"
+          content={
+            langEn
+              ? "Portfolio of Martín Panasci, full stack developer focused on scalable APIs and backend architecture."
+              : "Portfolio de Martín Panasci, desarrollador full stack enfocado en APIs escalables y arquitectura backend."
+          }
+        />
+        <meta property="og:title" content="Martín Panasci Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mpanasci.com" />
+        <meta property="og:image" content="https://mpanasci.com/og-image.jpg" />
+        <meta property="og:description" content="Full Stack Developer Portfolio - APIs, backend & scalable systems." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Martín Panasci",
+            "url": "https://mpanasci.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/martin-panasci/",
+              "https://github.com/martinpanasci"
+            ],
+            "jobTitle": langEn ? "Full Stack Developer" : "Desarrollador Full Stack",
+            "description": langEn
+              ? "Full stack developer focused on backend, scalable APIs and systems integration."
+              : "Desarrollador full stack especializado en backend, APIs escalables e integración de sistemas.",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Instituto Técnico Superior Teclab"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mar del Plata",
+              "addressRegion": "Buenos Aires",
+              "addressCountry": "AR"
+            }
+          })}
+        </script>
+      </Helmet>
 
-      {/* ⚠️ NO TOCAR ESTE DIV */}
+      {/* ✨ Siempre cargamos el fondo de grano y los anillos chicos en mobile */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url("/grain.jpg")` }}></div>
+
+        {/* Anillos chicos siempre visibles */}
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
-        <div className="size-[1220px] hero-ring"></div>
-        <div className="size-[1420px] hero-ring"></div>
-        <div className="size-[1620px] hero-ring"></div>
-        <div className="size-[1820px] hero-ring"></div>
-        <div className="size-[2020px] hero-ring"></div>
-        <div className="size-[2220px] hero-ring"></div>
-        <div className="size-[2420px] hero-ring"></div>
 
-        <HeroOrbit size={430} rotation={-14} shouldOrbit orbitDuration="30s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-8 text-emerald-300/20" />
-        </HeroOrbit>
-        <HeroOrbit size={440} rotation={79} shouldOrbit orbitDuration="32s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-5 text-emerald-300/20" />
-        </HeroOrbit>
-        <HeroOrbit size={520} rotation={-41} shouldOrbit orbitDuration="34s">
-          <div className="size-2 bg-green-300/20 rounded-full"></div>
-        </HeroOrbit>
-        <HeroOrbit size={530} rotation={178} shouldOrbit orbitDuration="36s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-10 text-emerald-300/20" />
-        </HeroOrbit>
-        <HeroOrbit size={550} rotation={20} shouldOrbit orbitDuration="38s" shouldSpin spinDuration="6s">
-          <StarIcon className="size-12 text-emerald-300" />
-        </HeroOrbit>
-        <HeroOrbit size={590} rotation={98} shouldOrbit orbitDuration="40s" shouldSpin spinDuration="6s">
-          <StarIcon className="size-8 text-emerald-300" />
-        </HeroOrbit>
-        <HeroOrbit size={650} rotation={-5} shouldOrbit orbitDuration="42s">
-          <div className="size-3 bg-green-300/20 rounded-full"></div>
-        </HeroOrbit>
-        <HeroOrbit size={710} rotation={144} shouldOrbit orbitDuration="44s" shouldSpin spinDuration="3s">
-          <SparkleIcon className="size-14 text-emerald-300/20" />
-        </HeroOrbit>
-        <HeroOrbit size={720} rotation={85} shouldOrbit orbitDuration="46s">
-          <div className="size-3 bg-green-300/20 rounded-full"></div>
-        </HeroOrbit>
-        <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
-          <StarIcon className="size-28 text-emerald-300" />
-        </HeroOrbit>
+        {/* MOBILE ONLY HeroOrbit */}
+        {!isDesktop && (
+          <>
+            <HeroOrbit size={440} rotation={79} shouldOrbit orbitDuration="32s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-5 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={530} rotation={178} shouldOrbit orbitDuration="36s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-10 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={550} rotation={20} shouldOrbit orbitDuration="38s" shouldSpin spinDuration="6s">
+              <StarIcon className="size-12 text-emerald-300" />
+            </HeroOrbit>
+            <HeroOrbit size={710} rotation={144} shouldOrbit orbitDuration="44s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-14 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
+              <StarIcon className="size-28 text-emerald-300" />
+            </HeroOrbit>
+          </>
+        )}
+
+        {/* DESKTOP ONLY: anillos grandes + HeroOrbit completo */}
+        {isDesktop && (
+          <>
+            <div className="size-[1220px] hero-ring"></div>
+            <div className="size-[1420px] hero-ring"></div>
+            <div className="size-[1620px] hero-ring"></div>
+
+            <HeroOrbit size={430} rotation={-14} shouldOrbit orbitDuration="30s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-8 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={440} rotation={79} shouldOrbit orbitDuration="32s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-5 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={520} rotation={-41} shouldOrbit orbitDuration="34s">
+              <div className="size-2 bg-green-300/20 rounded-full"></div>
+            </HeroOrbit>
+            <HeroOrbit size={530} rotation={178} shouldOrbit orbitDuration="36s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-10 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={550} rotation={20} shouldOrbit orbitDuration="38s" shouldSpin spinDuration="6s">
+              <StarIcon className="size-12 text-emerald-300" />
+            </HeroOrbit>
+            <HeroOrbit size={590} rotation={98} shouldOrbit orbitDuration="40s" shouldSpin spinDuration="6s">
+              <StarIcon className="size-8 text-emerald-300" />
+            </HeroOrbit>
+            <HeroOrbit size={650} rotation={-5} shouldOrbit orbitDuration="42s">
+              <div className="size-3 bg-green-300/20 rounded-full"></div>
+            </HeroOrbit>
+            <HeroOrbit size={710} rotation={144} shouldOrbit orbitDuration="44s" shouldSpin spinDuration="3s">
+              <SparkleIcon className="size-14 text-emerald-300/20" />
+            </HeroOrbit>
+            <HeroOrbit size={720} rotation={85} shouldOrbit orbitDuration="46s">
+              <div className="size-3 bg-green-300/20 rounded-full"></div>
+            </HeroOrbit>
+            <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
+              <StarIcon className="size-28 text-emerald-300" />
+            </HeroOrbit>
+          </>
+        )}
       </div>
 
       {/* CONTENIDO */}
@@ -63,6 +135,9 @@ export default function HeroSection() {
           <img
             src={yo}
             alt={langEn ? "Memoji of me sitting at a computer" : "Memoji mío sentado en una computadora"}
+            loading="lazy"
+            width={1508} // ← o el valor real
+            height={2030} // ← ajustalo si no es cuadrada
             className="h-[250px] md:h-[350px] w-auto"
           />
           <div className="bg-gray-950 border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg md:w-80 md:justify-center">

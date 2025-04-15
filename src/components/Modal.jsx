@@ -23,6 +23,7 @@ export const Modal = ({ onClose, data }) => {
             <img
               src={data.img}
               alt={data.title}
+              loading="lazy"
               className="w-auto h-80 object-cover rounded-lg mb-4"
             />
           </div>

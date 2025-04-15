@@ -96,7 +96,7 @@ export default function AboutSection() {
                 </p>
               </div>
               <div className="w-40 mx-auto mt-8">
-                <img src={bookImage} alt="book cover" />
+                <img src={bookImage} alt="book cover" loading="lazy" />
               </div>
             </Card>
 
@@ -166,6 +166,7 @@ export default function AboutSection() {
               <img
                 src={mapImage}
                 alt="map"
+                loading="lazy"
                 className="h-full w-full object-cover object-left-top"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
