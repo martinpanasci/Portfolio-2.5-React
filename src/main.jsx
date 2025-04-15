@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-
+import { BrowserTracing } from "@sentry/tracing";
 import { LanguageProvider } from './context/LanguageContext'
 
 // Inicializás Sentry con el DSN que te dieron
